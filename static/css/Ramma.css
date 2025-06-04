@@ -1,0 +1,57 @@
+body{
+    background-color:black; 
+}
+
+#titulo {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:silver;
+}
+
+#rec1{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:red;
+    text-align: center;
+}
+
+#rec2{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:crimson;
+    text-align: center;
+}
+
+.imagenes{
+    width: 400px;
+}
+
+.cont{
+    float: left;
+    width: 300px;
+    margin-left: 105px;
+}
+
+#rec3{
+    font-family: "Poetsen One", sans-serif;
+    font-style: normal;
+    color:deepskyblue;
+    text-align: center;
+}
+
+#rec4{
+    font-family: "Poetsen One", sans-serif;
+    font-style: normal;
+    color:firebrick;
+    text-align: center;
+}
+
+#rec5{
+    font-family: "Poetsen One", sans-serif;
+    font-style: normal;
+    color:slategray;
+    text-align: center;
+}

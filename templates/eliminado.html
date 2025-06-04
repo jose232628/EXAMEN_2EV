@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ELIMINAR ARTISTAS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row content">
+    <div class="col-sm-3 sidenav">
+    <h4>IMPLANTACION DE APLICACIONES WEB - FASTAPI</h4>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/">INICIO</a></li>
+        {% if menu %}
+            <li class="active">
+                {% if menu.home %}
+                    <a href="{{ url_for('get_hospitales') }}">VER ARTISTAS</a>
+                {% endif %}
+            </li>
+            <li class="active">   
+                {% if menu.add %}
+                    <a href="{{ url_for('form_add_hospitales') }}">AÑADIR ARTISTAS</a>
+                {% endif %}
+            </li>
+            <li class="active">   
+                {% if menu.add %}
+                    <a href="{{ url_for('form_update_hospital') }}">ACTUALIZAR ARTISTAS</a>
+                {% endif %}
+            </li>
+        {% endif %}
+    </ul><br>
+</div>
+
+    <div class="col-sm-9">
+    <h3><small>HOSPITALES</small></h3>
+    <hr>
+    <h1>ELIMINAR HOSPITALES</h1> <br>
+    <form action="{{ url_for('del_hospitales') }}" method="post">
+        <select  name="hospital_id">
+            {% for hospital in hospitales %}  
+                <option value="{{hospital.id}}">{{hospital.nombre}}</option>
+            {% endfor%}
+        </select>
+        <input type="submit" value="Eliminar">
+    </form>
+    <h1>HOSPITAL ELIMINADO</h1>
+
+</div>
+</div>
+
+<footer class="container-fluid">
+<p>STEVEN NATA IMPLANTACION DE APLICACIONES WEB</p>
+</footer>
+
+</body>
+</html>
